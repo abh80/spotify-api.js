@@ -3,7 +3,6 @@
   <div>
     <a href="https://spotify-apijs.netlify.app/#/"><img src="https://img.shields.io/badge/READ-DOCS-orange?style=for-the-badge"></a>
     <a href="https://github.com/spotify-api/spotify-api.js/"><img src="https://img.shields.io/github/repo-size/spotify-api/spotify-api.js?label=Size&style=for-the-badge"></a>
-    <a href="https://www.npmjs.com/package/spotify-api.js"><img src="https://img.shields.io/jsdelivr/npm/hw/spotify-api.js?label=Downloads&style=for-the-badge"></a>
     <a href="https://www.npmjs.com/package/spotify-api.js"><img src="https://img.shields.io/npm/v/spotify-api.js?label=Version&style=for-the-badge"></a>
   </div><br>
 </div>
@@ -87,12 +86,10 @@ const { Client } = require("spotify-api.js"); // Import package
 const spotify = new Client("token"); // Load client with token or using oauth
 
 const track = await spotify.tracks.search("oh my god by alec benjamin", { limit: 1, advanced:true }); // Search albums
-console.log(track[0].images[0].url) // Get the image url
 console.log(track[0].codeImage); // Get the code image for advanced...
 console.log(track[0].dominantColor); // Get the dominant color... Returns { hex: string, rgb: [r, g, b, a] }
 ```
 
 ### Example for the cover and code image
 
-- <img src = "https://i.scdn.co/image/ab67616d0000b273ee0232b590932e81529781e1" width ="200" height = "200"></img>
 - <img src = "https://scannables.scdn.co/uri/plain/jpeg/786a95/white/1080/spotify:track:44I5NYJ7CGEcaLOuG2zJsU" width = '600' height = "150"></img>
